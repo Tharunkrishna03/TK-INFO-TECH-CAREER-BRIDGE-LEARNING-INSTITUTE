@@ -72,6 +72,7 @@ export default function Home() {
   };
 
   const [activeWhy, setActiveWhy] = useState(0);
+  const [activeService, setActiveService] = useState(0);
   const [activeProcess, setActiveProcess] = useState('software');
 
   const openServiceDetails = (service) => {
@@ -88,10 +89,11 @@ export default function Home() {
   useEffect(() => {
     const timer = window.setInterval(() => {
       setActiveWhy((current) => (current + 1) % whyHighlights.length);
+      setActiveService((current) => (current + 1) % coreServices.length);
     }, 3200);
 
     return () => window.clearInterval(timer);
-  }, [whyHighlights.length]);
+  }, [whyHighlights.length, coreServices.length]);
 
   return (
     <main className="page-shell">
@@ -170,38 +172,35 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="core-services-section" aria-label="Core services">
-        <div className="core-services-grid" aria-hidden="true"></div>
-        <div className="site-container core-services-inner">
-          <div className="core-services-copy reveal">
-            <p>our core</p>
-            <h2>Services</h2>
-            <span>Smart solutions real results</span>
+      <section className="core-services-section theme-split" aria-label="Core services">
+        <div className="core-services-inner theme-split-inner">
+          <div className="theme-split-left" style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div className="uiverse-card">
+              <div className="uiverse-content">
+                {coreServices.map((service, index) => (
+                  <div 
+                    className="uiverse-word" 
+                    key={service.title}
+                    role="link"
+                    tabIndex="0"
+                    onClick={() => openServiceDetails(service.service)}
+                    onKeyDown={(event) => handleServiceCardKeyDown(event, service.service)}
+                  >
+                    <i className={service.icon} style={{ fontSize: '3.5rem', color: '#8b5cf6', marginBottom: '15px' }}></i>
+                    <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>{service.title}</h3>
+                    <p style={{ fontSize: '0.9rem', color: '#666', lineHeight: '1.4' }}>Professional solutions tailored for growth.</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-
-          <div className="core-service-cards reveal">
-            {coreServices.map((service, index) => (
-              <article
-                className={`core-service-card core-service-card-${index + 1}`}
-                key={service.title}
-                role="link"
-                tabIndex="0"
-                onClick={() => openServiceDetails(service.service)}
-                onKeyDown={(event) => handleServiceCardKeyDown(event, service.service)}
-              >
-                <div className="core-service-media" aria-hidden="true">
-                  <video autoPlay muted loop playsInline preload="metadata" controlsList="nodownload">
-                    <source src="/hero.mp4" type="video/mp4" />
-                  </video>
-                  <i className={service.icon}></i>
-                </div>
-                <h3>{service.title}</h3>
-              </article>
-            ))}
-          </div>
-
-          <div className="core-services-action reveal">
-            <Link className="btn btn-brand btn-lg core-services-button" to="/services">Our services</Link>
+          <div className="theme-split-right">
+            <div className="theme-split-copy">
+              <div className="theme-split-line"></div>
+              <h2>OUR CORE SERVICES</h2>
+              <p>Smart solutions real results. We bridge the gap between education, careers, and digital growth through training, career support, and technology services.</p>
+              <Link className="btn btn-brand core-services-button" to="/services" style={{ marginTop: '1.5rem' }}>Our services</Link>
+            </div>
           </div>
         </div>
       </section>
