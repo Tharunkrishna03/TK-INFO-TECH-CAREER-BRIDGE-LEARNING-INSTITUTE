@@ -4348,6 +4348,8 @@ body:has(.service-popup) .cursor-spark {
   align-items: center;
   overflow: hidden;
   background-color: #ffffff;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
 }
 
 .theme-split-inner {
@@ -4365,7 +4367,8 @@ body:has(.service-popup) .cursor-spark {
 .theme-split-left {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 .theme-split-list {
@@ -4558,8 +4561,8 @@ body:has(.service-popup) .cursor-spark {
   flex: 1;
   min-width: 280px;
   height: 260px;
-  background-color: rgba(255, 255, 255, 0.03);
-  border: 1px dashed rgba(255, 255, 255, 0.15);
+  background-color: rgba(0, 0, 0, 0.03);
+  border: 1px dashed rgba(0, 0, 0, 0.15);
   border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
@@ -4630,17 +4633,18 @@ body:has(.service-popup) .cursor-spark {
 }
 
 .uiverse-card {
-  width: 260px;
-  height: 300px;
-  background: rgb(223, 225, 235);
+  width: 360px;
+  height: 420px;
+  background: #ffffff;
   overflow: hidden;
   border-radius: 20px;
+  border: 2px solid #8b5cf6;
   box-shadow:
-    inset 0px 56px 40px #2224,
+    inset 0px 56px 40px rgba(0, 0, 0, 0.05),
     inset 0px -56px 40px #fff,
     1px 1px 2px #fff,
-    -1px -1px 2px #4442;
-  margin: 0 auto;
+    -1px -1px 2px rgba(0, 0, 0, 0.05);
+  margin: auto;
 }
 
 .uiverse-content {
@@ -4674,4 +4678,61 @@ body:has(.service-popup) .cursor-spark {
   60%, 75% { transform: translateX(-60%); }
   80%, 95% { transform: translateX(-80%); }
   100% { transform: translateX(0%); }
+}
+
+/* Custom Connect Us Button */
+.connect-us-btn {
+  border: none;
+  display: block;
+  position: relative;
+  padding: 0.7em 2.4em;
+  font-size: 18px;
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  color: darkviolet;
+  z-index: 1;
+  font-family: inherit;
+  font-weight: 500;
+  margin-top: 1.5rem;
+}
+
+.connect-us-btn span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+  border: 4px solid rgb(45, 12, 59);
+  box-sizing: border-box;
+}
+
+.connect-us-btn span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background: var(--lightgray, #ffffff);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  transition: all 0.3s;
+}
+
+.connect-us-btn:hover span::before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 100%;
+  background: rgb(45, 12, 59);
+}
+
+.connect-us-btn:hover {
+  color: white;
+}
+
+.connect-us-btn:active span::before {
+  background: #5a2e98;
 }

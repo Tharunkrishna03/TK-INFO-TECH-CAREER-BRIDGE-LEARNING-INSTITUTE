@@ -74,7 +74,7 @@ function runCounters() {
 // Helper to stagger card animations
 function runStaggerCardMotion() {
   const animatedCards = document.querySelectorAll(
-    '.stat-card, .logo-badge, .feature-card, .reason-card, .programme-card, .value-card, .partner-tile, .footer-card, .software-service-tab, .work-process-card, .about-profile-grid > article, .about-profile-contact-grid a, .application-form > *, .contact-form > *'
+    '.stat-card, .logo-badge, .feature-card, .reason-card, .programme-card, .value-card, .partner-tile, .footer-card, .work-process-card, .about-profile-grid > article, .about-profile-contact-grid a, .application-form > *, .contact-form > *'
   );
 
   animatedCards.forEach((card, index) => {
@@ -90,7 +90,7 @@ function smoothScrollToTop() {
 function getRevealMotion(item, index) {
   if (
     item.matches(
-      '.feature-card, .reason-card, .programme-card, .value-card, .partner-tile, .logo-badge, .stat-card, .software-service-tab, .work-process-card, .about-profile-grid > article'
+      '.feature-card, .reason-card, .programme-card, .value-card, .partner-tile, .logo-badge, .stat-card, .work-process-card, .about-profile-grid > article'
     )
   ) {
     return {
@@ -123,7 +123,6 @@ function runRevealAnimations() {
     '.reveal',
     '.software-services-layout',
     '.software-service-card',
-    '.software-service-tab',
     '.offered-course-card',
     '.work-process-card',
     '.about-profile-grid > article',
