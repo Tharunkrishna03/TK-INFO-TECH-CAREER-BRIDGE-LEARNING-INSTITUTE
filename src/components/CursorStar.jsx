@@ -26,8 +26,8 @@ export default function CursorStar() {
 
     const render = () => {
       if (!isMounted) return;
-      starX += (mouseX - starX) * 0.22;
-      starY += (mouseY - starY) * 0.22;
+      starX += (mouseX - starX) * 0.12;
+      starY += (mouseY - starY) * 0.12;
 
       star.style.left = `${starX}px`;
       star.style.top = `${starY}px`;

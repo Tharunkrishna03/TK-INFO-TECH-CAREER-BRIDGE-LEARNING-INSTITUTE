@@ -88,6 +88,14 @@ function smoothScrollToTop() {
 }
 
 function getRevealMotion(item, index) {
+  if (item.matches('.slide-left')) {
+    return { x: -150, y: 22 };
+  }
+
+  if (item.matches('.slide-right')) {
+    return { x: 150, y: 22 };
+  }
+
   if (
     item.matches(
       '.feature-card, .reason-card, .programme-card, .value-card, .partner-tile, .logo-badge, .stat-card, .work-process-card, .about-profile-grid > article'

@@ -94,7 +94,7 @@ export default function Projects() {
         <div className="core-services-grid" aria-hidden="true"></div>
         <div className="site-container project-hero-inner">
           <div className="core-services-copy reveal">
-            <p>OUR PROJECTS</p>
+            <p className="dia-text-reveal" style={{ fontSize: 'clamp(3rem, 6vw, 4.5rem)', textTransform: 'uppercase' }}>OUR PROJECTS</p>
             
           </div>
           <button className="project-scroll-button" type="button" onClick={scrollToProject}>
@@ -106,7 +106,7 @@ export default function Projects() {
 
       <section className="section-space project-detail-section" id="jewel-finance-project">
         <div className="site-container project-detail-layout">
-          <div className="project-detail-media reveal" style={{ padding: 0 }}>
+          <div className="project-detail-media reveal slide-left" style={{ padding: 0 }}>
             <ImageSlider 
               images={[
                 '/tk-info-tech-career-bridge-learning-institute-demo-erp-1.png',
@@ -116,7 +116,7 @@ export default function Projects() {
               altPrefix="Jewel Finance ERP Software"
             />
           </div>
-          <div className="project-detail-copy reveal">
+          <div className="project-detail-copy reveal slide-right">
             <h2>Jewel Finance ERP Software</h2>
             <p>
               A comprehensive ERP solution designed specifically for jewelry finance businesses to streamline customer
@@ -131,7 +131,7 @@ export default function Projects() {
 
       <section className="section-space project-detail-section">
         <div className="site-container project-detail-layout">
-          <div className="project-detail-copy reveal">
+          <div className="project-detail-copy reveal slide-left">
             <h2>Service Management ERP System</h2>
             <p>
               A powerful ERP solution developed for service-based businesses to manage clients, projects, employees,
@@ -142,7 +142,7 @@ export default function Projects() {
               Read more
             </button>
           </div>
-          <div className="project-detail-media reveal">
+          <div className="project-detail-media reveal slide-right">
             <img src="/project.jpg" alt="Service Management ERP System project" />
           </div>
         </div>

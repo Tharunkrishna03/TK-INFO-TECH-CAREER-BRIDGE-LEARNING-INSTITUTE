@@ -16,13 +16,13 @@ const softwareServices = [
     icon: "bx bx-code-curly",
     image: "/web-development-cover.png",
     headline: "Custom Websites That Build Your Digital Presence",
-    description: "In today's digital era, your website is the face of your business and often the first impression customers have of your brand. At TK-INFOTECHSOFT, we specialize in creating modern, responsive, secure, and high-performance websites tailored to your unique requirements. We combine innovative design with advanced technologies to deliver websites that perform flawlessly across every device and platform. Every project is carefully crafted to ensure visitors enjoy a seamless browsing experience while encouraging meaningful interactions. Our scalable architecture and clean coding standards guarantee that your digital storefront remains effective and future-ready for years to come.",
+    description: "At TK-INFOTECHSOFT, we specialize in creating modern, responsive, secure, and high-performance websites tailored to your unique requirements. We combine innovative design with advanced technologies to deliver websites that perform flawlessly.",
     points: [
-      "Responsive Design - We build websites that automatically adapt to desktops, tablets, and smartphones for a seamless user experience.",
-      "Fast Performance - Our optimized code and media assets ensure lightning-fast loading speeds to keep your audience engaged.",
-      "SEO Optimization - We follow search engine best practices to improve your visibility, rankings, and organic traffic.",
-      "Secure Architecture - We implement strong security measures including HTTPS, data encryption, and protection against common vulnerabilities.",
-      "Intuitive Navigation - We design clear menus and intuitive layouts to help visitors find information quickly and easily."
+      "Responsive Design ",
+      "Fast Performance ",
+      "SEO Optimization ",
+      "Secure Architecture",
+      "Intuitive Navigation   "
     ]
   },
   {
@@ -30,13 +30,13 @@ const softwareServices = [
     icon: "bx bx-store-alt",
     image: "/ecommerce-cover.png",
     headline: "Powerful Online Stores That Drive Sales",
-    description: "Consumers now expect businesses to provide fast, secure, and convenient online shopping experiences available anytime and anywhere. A professionally developed e-commerce website helps businesses meet these expectations while expanding their reach globally. At TK-INFOTECHSOFT, we specialize in designing powerful e-commerce solutions built with a strong focus on user experience, speed, and security. From product management and inventory tracking to secure payment processing, we provide everything needed to maximize sales conversions. Whether you are a retail store or a large enterprise, our customized platforms support your long-term business growth.",
+    description: "At TK-INFOTECHSOFT, we specialize in designing powerful e-commerce solutions built with a strong focus on user experience, speed, and security. We provide everything needed to maximize sales conversions and support your long-term business growth.",
     points: [
-      "Secure Checkout Process - We provide a simple and highly secure checkout experience that minimizes abandoned carts and protects customer data.",
-      "Payment Gateway Integration - Support for multiple payment methods including Credit Cards, UPI, Net Banking, and international payments.",
-      "Advanced Product Search - Help customers quickly find what they are looking for through smart search, advanced filters, and intuitive sorting options.",
-      "Inventory Management - Automatically monitor stock levels, receive low-stock alerts, and manage your product inventory efficiently.",
-      "Mobile Commerce - We deliver responsive online stores optimized for smartphones and tablets to ensure a seamless shopping experience on the go."
+      "Secure Checkout Process ",
+      "Payment Gateway Integration ",
+      "Advanced Product Search ",
+      "Inventory Management ",
+      "Mobile Commerce  "
     ]
   },
   {
@@ -44,13 +44,13 @@ const softwareServices = [
     icon: "bx bx-layer",
     image: "/business.png",
     headline: "Integrated Solutions for Efficient Business Management",
-    description: "Managing finance, inventory, sales, human resources, and customer service through disconnected systems often leads to errors and poor decision-making. At TK-INFOTECHSOFT, we develop custom Enterprise Resource Planning (ERP) solutions that bring every aspect of your business into one centralized platform. Our ERP systems are designed to simplify operations, automate repetitive tasks, improve collaboration, and provide real-time visibility into your organization's performance. We build flexible, scalable, and secure systems that help businesses reduce costs and respond faster to market changes. By eliminating data silos, our tailored ERP software becomes the reliable backbone of your enterprise.",
+    description: "At TK-INFOTECHSOFT, we develop custom Enterprise Resource Planning (ERP) solutions that bring every aspect of your business into one centralized platform. Our systems simplify operations, automate tasks, and provide real-time visibility.",
     points: [
-      "Centralized Operations - Integrate all your departments into one platform so employees can access accurate information in real time.",
-      "Workflow Automation - Reduce manual work and operational costs by automating routine tasks and approval workflows.",
-      "Real-Time Analytics - Gain immediate insights into your business performance with interactive dashboards and advanced reporting.",
-      "Scalable Architecture - Our modular design allows new features and departments to be seamlessly added as your business grows.",
-      "Role-Based Security - Ensure data privacy and compliance by providing secure access based on specific employee responsibilities."
+      "Centralized Operations ",
+      "Workflow Automation ",
+      "Real-Time Analytics ",
+      "Scalable Architecture ",
+      "Role-Based Security "
     ]
   },
   {
@@ -58,13 +58,13 @@ const softwareServices = [
     icon: "bx bx-user-pin",
     image: "/crm.png",
     headline: "Strengthen Customer Relationships and Boost Sales",
-    description: "In today's competitive business environment, building strong, personalized customer relationships is essential for long-term success. Managing client information through disconnected tools often results in missed opportunities, delayed follow-ups, and reduced customer satisfaction. At TK-INFOTECHSOFT, we develop intelligent Customer Relationship Management (CRM) solutions that centralize all customer interactions into one secure platform. Our customized systems allow your sales, marketing, and support teams to automate processes, manage leads, and collaborate seamlessly. By combining intelligent reporting and tailored workflows, we help you maximize revenue and deliver exceptional customer experiences.",
+    description: "At TK-INFOTECHSOFT, we develop intelligent Customer Relationship Management (CRM) solutions that centralize all customer interactions. Our customized systems allow your teams to automate processes, manage leads, and collaborate seamlessly.",
     points: [
-      "Lead Management - Capture, qualify, and track leads from various sources to monitor their journey from initial inquiry to successful conversion.",
-      "Sales Automation - Automate repetitive tasks such as follow-up reminders, email communications, and meeting schedules to increase productivity.",
-      "360-Degree Customer View - Maintain a centralized database containing communication history, preferences, and essential contact details.",
-      "Marketing Campaigns - Create targeted campaigns, segment your audience, and nurture leads automatically to drive business growth.",
-      "Performance Dashboards - Track key performance indicators, sales targets, and team achievements in real time to make data-driven decisions."
+      "Lead Management",
+      "Sales Automation",
+      "360-Degree Customer View",
+      "Marketing Campaigns",
+      "Performance Dashboards "
     ]
   },
   {
@@ -72,13 +72,13 @@ const softwareServices = [
     icon: "bx bx-id-card",
     image: "/portfolio.png",
     headline: "Showcase Your Brand, Work, and Achievements",
-    description: "Your online presence is often the first interaction potential clients, employers, or collaborators have with you. A well-designed portfolio website is one of the most effective ways to showcase your expertise, achievements, and unique value in a competitive digital landscape. At TK-INFOTECHSOFT, we create visually stunning, highly responsive portfolio websites that help individuals and businesses build trust and attract high-quality opportunities. We combine creative design with strategic content placement to ensure your digital showcase communicates your journey and vision effectively. Let us build a personalized platform that highlights your skills and converts visitors into lasting connections.",
+    description: "At TK-INFOTECHSOFT, we create visually stunning, highly responsive portfolio websites that help individuals and businesses build trust. We combine creative design with strategic content placement to highlight your skills effectively.",
     points: [
-      "Personalized Branding - We create customized layouts that align perfectly with your personality or corporate business identity.",
-      "Project Showcase - Display your completed projects, case studies, and achievements with engaging image galleries and detailed descriptions.",
-      "Interactive Resume - Present your work experience, education, and professional skills in an organized and highly readable timeline format.",
-      "Client Testimonials - Build credibility and trust by effectively showcasing genuine feedback and success stories from past clients.",
-      "Contact Integration - Make it effortless for visitors to reach you through secure inquiry forms and integrated social media links."
+      "Personalized Branding ",
+      "Project Showcase ",
+      "Interactive Resume ",
+      "Client Testimonials ",
+      "Contact Integration  "
     ]
   }
 ];
@@ -365,7 +365,7 @@ export default function Services() {
 
       <section className="software-services-section" aria-labelledby="software-services-title">
         <div className="site-container software-services-inner">
-          <h2 id="software-services-title" style={{ letterSpacing: '0.1em', color: 'darkviolet', animation: 'whyBrandGlow 3.8s ease-in-out infinite' }}>Our Software Services</h2>
+          <h2 id="software-services-title" style={{ letterSpacing: '0.1em', color: 'midnightblue' }}>Our Software Services</h2>
 <br/>
           <div className="software-services-layout" style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }}>
             {softwareServices.map((service, serviceIndex) => (
@@ -377,8 +377,8 @@ export default function Services() {
               >
                 <div className={`zigzag-row ${serviceIndex % 2 !== 0 ? 'reverse' : ''}`}>
                   <div className="zigzag-content">
-                    <h3 style={{ fontSize: '2.5rem', color: 'darkviolet', marginBottom: '0.5rem' }}>{service.title}</h3>
-                    <h4 style={{ fontSize: '1.25rem', color: '#1c1c1c', marginBottom: '1.5rem' }}>{service.headline}</h4>
+                    <h3 style={{ fontSize: '2.5rem', color: 'rgb(25,25,112)', textTransform: 'uppercase', marginBottom: '0.5rem' }}>{service.title}</h3>
+                    <h4 style={{ fontSize: '1.25rem', color: '#1c1c1c', marginBottom: '2.5rem' }}>{service.headline}</h4>
                     {service.description && (
                       <p className="service-topic-description" style={{ color: 'var(--text-muted)', lineHeight: '1.8', fontSize: '1.05rem', marginBottom: '2rem' }}>
                         {service.description}
@@ -391,17 +391,17 @@ export default function Services() {
                         </div>
                       ) : (
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
-                          {service.points.map((point, index) => {
+                          {service.points && service.points.map((point, index) => {
                             const parts = point.split(' - ');
                             const title = parts[0];
-                            const desc = parts.slice(1).join(' - ') || point;
+                            const desc = parts.length > 1 ? parts.slice(1).join(' - ') : null;
 
                             return (
                               <li key={index} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
                                 <i className="bx bx-check" style={{ color: '#00c2ff', fontSize: '1.5rem', marginTop: '0.1rem' }}></i>
                                 <div>
                                   <strong style={{ color: '#1c1c1c', fontSize: '1.15rem' }}>{title}</strong>
-                                  <p style={{ color: 'var(--text-muted)', margin: '0.4rem 0 0', lineHeight: '1.6' }}>{desc}</p>
+                                  {desc && <p style={{ color: 'var(--text-muted)', margin: '0.4rem 0 0', lineHeight: '1.6' }}>{desc}</p>}
                                 </div>
                               </li>
                             );
@@ -425,12 +425,13 @@ export default function Services() {
                     padding: '1.5rem 0'
                   }}>
                     {service.image ? (
-                      <img src={service.image} alt={service.title} style={{ width: '100%', maxHeight: '400px', objectFit: 'contain', borderRadius: '1rem' }} />
+                      <img src={service.image} alt={service.title} style={{ width: '85%', maxHeight: '340px', objectFit: 'contain', borderRadius: '1rem' }} />
                     ) : (
                       <span>Image Space</span>
                     )}
                     <button 
                       className="connect-us-btn" 
+                      style={{ padding: '0.5em 1.5em', fontSize: '15px' }}
                       onClick={() => {
                         setFormData((prev) => ({ ...prev, course: service.title }));
                         setStatus({ text: '', type: '' });
@@ -450,7 +451,7 @@ export default function Services() {
 
       <section className="software-services-section offered-courses-section" aria-labelledby="offered-courses-title">
         <div className="site-container software-services-inner">
-          <h2 id="offered-courses-title" style={{ letterSpacing: '0.1em', color: 'darkviolet', animation: 'whyBrandGlow 3.8s ease-in-out infinite' }}>Course Offered</h2>
+          <h2 id="offered-courses-title" style={{ letterSpacing: '0.1em', color: 'darkviolet' }}>Course Offered</h2>
 <br/>
           <div className="software-services-layout offered-courses-layout">
             <article
@@ -459,7 +460,7 @@ export default function Services() {
               role="tabpanel"
               aria-labelledby={`offered-course-tab-${activeOfferedCourse}`}
             >
-              <h3>{offeredCourses[activeOfferedCourse].title}</h3>
+              <h3 style={{ color: 'rgb(25,25,112)', textTransform: 'uppercase' }}>{offeredCourses[activeOfferedCourse].title}</h3>
               <p>{offeredCourses[activeOfferedCourse].description}</p>
               <div className="programme-meta">
                 {offeredCourses[activeOfferedCourse].meta.map((item) => (
