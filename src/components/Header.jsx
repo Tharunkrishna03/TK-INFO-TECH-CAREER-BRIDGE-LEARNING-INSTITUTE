@@ -51,7 +51,7 @@ export default function Header() {
             </label>
             
             <Link className="navbar-brand brand-mark" to="/" aria-label="TK INFOTECHSOFT home">
-              <img className="brand-logo" src="/logotk (1).png" alt="TK INFOTECHSOFT logo" />
+              <img className="brand-logo" src="/header-logo.png" alt="TK INFOTECHSOFT logo" />
             </Link>
 
             <div className="desktop-nav d-none d-md-flex ms-auto">

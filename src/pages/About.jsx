@@ -48,7 +48,7 @@ export default function About() {
           <div className="about-profile-photo-wrap reveal">
             <img
               className="about-profile-photo"
-              src="/Gemini_Generated_Image_37ybzm37ybzm37yb.png"
+              src="/founder-portrait.png"
               alt="Portrait of D. Tharun Krishna"
               loading="lazy"
             />

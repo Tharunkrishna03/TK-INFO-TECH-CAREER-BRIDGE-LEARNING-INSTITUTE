@@ -2662,7 +2662,7 @@ body.mobile-sidebar-open {
 
 .project-hero {
   position: relative;
-  min-height: 100svh;
+  min-height: 75svh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -2675,7 +2675,7 @@ body.mobile-sidebar-open {
 .project-hero-inner {
   position: relative;
   z-index: 1;
-  min-height: 100svh;
+  min-height: 75svh;
   display: grid;
   grid-template-rows: 1fr auto;
   align-items: center;

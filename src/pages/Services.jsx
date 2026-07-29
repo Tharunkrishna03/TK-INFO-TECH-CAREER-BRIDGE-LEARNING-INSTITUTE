@@ -353,6 +353,18 @@ export default function Services() {
               industry-focused training for learners. Empowering organizations and individuals
               with the skills and technology needed to succeed.
             </p>
+            <div className="hero-actions">
+              <button 
+                className="btn btn-brand btn-lg" 
+                onClick={() => {
+                  setFormData((prev) => ({ ...prev, course: 'General Service Enquiry' }));
+                  setStatus({ text: '', type: '' });
+                  setIsServicePopupOpen(true);
+                }}
+              >
+                Enquiry Now
+              </button>
+            </div>
           </div>
 
           <div className="hero-visual reveal" aria-hidden="true">
