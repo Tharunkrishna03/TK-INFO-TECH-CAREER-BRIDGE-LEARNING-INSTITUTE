@@ -139,7 +139,6 @@ const offeredCourses = [
 
 export default function Services() {
   const [activeSoftwareService, setActiveSoftwareService] = useState(0);
-  const [activeOfferedCourse, setActiveOfferedCourse] = useState(0);
   const [isServicePopupOpen, setIsServicePopupOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -327,13 +326,6 @@ export default function Services() {
     }
   };
 
-  const openCourseEnquiryPopup = () => {
-    const selectedCourse = offeredCourses[activeOfferedCourse].title;
-    setFormData((prev) => ({ ...prev, course: selectedCourse }));
-    setStatus({ text: '', type: '' });
-    setIsServicePopupOpen(true);
-  };
-
   const closeServicePopup = () => {
     setIsServicePopupOpen(false);
   };
@@ -456,63 +448,6 @@ export default function Services() {
                 </div>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-
-      <section className="software-services-section offered-courses-section" aria-labelledby="offered-courses-title">
-        <div className="site-container software-services-inner">
-          <h2 id="offered-courses-title" style={{ letterSpacing: '0.1em', color: 'darkviolet' }}>Course Offered</h2>
-<br/>
-          <div className="software-services-layout offered-courses-layout">
-            <article
-              className="software-service-card offered-course-card"
-              id="offered-course-panel"
-              role="tabpanel"
-              aria-labelledby={`offered-course-tab-${activeOfferedCourse}`}
-            >
-              <h3 style={{ color: 'rgb(25,25,112)', textTransform: 'uppercase' }}>{offeredCourses[activeOfferedCourse].title}</h3>
-              <p>{offeredCourses[activeOfferedCourse].description}</p>
-              <div className="programme-meta">
-                {offeredCourses[activeOfferedCourse].meta.map((item) => (
-                  <span className="meta-chip" key={item}>{item}</span>
-                ))}
-              </div>
-              <button className="btn btn-brand btn-lg core-services-button offered-course-link" type="button" onClick={openCourseEnquiryPopup}>
-                Register course <i className="bx bx-right-arrow-alt"></i>
-              </button>
-            </article>
-
-            <div className="software-service-tabs offered-course-tabs" role="tablist" aria-label="Course offered">
-              {offeredCourses.map((course, index) => (
-                <button
-                  className={`software-service-tab ${activeOfferedCourse === index ? 'is-active' : ''}`}
-                  type="button"
-                  role="tab"
-                  aria-selected={activeOfferedCourse === index}
-                  aria-controls="offered-course-panel"
-                  id={`offered-course-tab-${index}`}
-                  key={course.title}
-                  onClick={() => setActiveOfferedCourse(index)}
-                >
-                  <span className="software-service-fold" aria-hidden="true"></span>
-                  <span className="software-service-points" aria-hidden="true">
-                    <span className="software-service-point"></span>
-                    <span className="software-service-point"></span>
-                    <span className="software-service-point"></span>
-                    <span className="software-service-point"></span>
-                    <span className="software-service-point"></span>
-                    <span className="software-service-point"></span>
-                    <span className="software-service-point"></span>
-                    <span className="software-service-point"></span>
-                    <span className="software-service-point"></span>
-                    <span className="software-service-point"></span>
-                  </span>
-                  <span className="software-service-inner">{course.tabTitle || course.title}</span>
-                </button>
-              ))}
-            </div>
           </div>
         </div>
       </section>

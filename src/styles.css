@@ -4254,23 +4254,6 @@ body:has(.service-popup) .cursor-spark {
 }
 
 
-@supports (animation-timeline: scroll()) {
-  .services-hero {
-    transform-origin: top center;
-    animation: serviceHeroScrollZoomOut linear both;
-    animation-timeline: scroll(root block);
-    animation-range: 0 100vh;
-  }
-}
-
-@keyframes serviceHeroScrollZoomOut {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0.95);
-  }
-}
 
 /* Mobile Menu Toggle Animation */
 #checkbox {
