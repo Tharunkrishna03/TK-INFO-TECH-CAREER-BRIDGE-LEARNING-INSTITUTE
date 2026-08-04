@@ -18,7 +18,7 @@ export default function About() {
           <div className="about-first-view-copy">
             <span className="eyebrow"><i className="bx bxs-rocket"></i> About us</span>
             <h1>Powering Growth Through Innovation</h1>
-            <p>
+            <p style={{ textAlign: 'justify' }}>
            At TK InfotechSoft, we don't just develop software . we create intelligent digital solutions that help businesses grow, innovate, and stay ahead in a rapidly evolving world.
             </p>
             <div className="hero-actions">
@@ -38,11 +38,11 @@ export default function About() {
             <h2>About us</h2>
           </div>
           <div className="about-profile-copy">
-           <p>
+           <p style={{ textAlign: 'justify' }}>
   As the Founder of TK-INFOTECHSOFT, a training partner of MC-TECH Industrial School, I am committed to delivering high-quality software solutions while helping students and working professionals build the skills needed for today’s fast-evolving IT landscape.
 </p>
 
-<p>
+<p style={{ textAlign: 'justify' }}>
   At TK-INFOTECHSOFT, our priority is to provide innovative software services—including Web Development, E-Commerce Solutions, ERP Systems, CRM Applications, and Custom Software Development—while reducing the gap between industry expectations and learner capabilities through practical training, real-time projects, mentorship, and technical support.
 </p>
             
