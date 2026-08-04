@@ -3982,6 +3982,10 @@ body:has(.service-popup) .cursor-spark {
   .about-profile-photo-wrap {
     width: min(100%, 300px);
   }
+
+  .project-detail-media {
+    order: -1;
+  }
 }
 
 @media (max-width: 767.98px) {
