@@ -1,12 +1,27 @@
+/**
+ * Header.jsx
+ * Global navigation component.
+ * Handles desktop navigation and a responsive mobile sidebar.
+ */
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 
+/**
+ * Header Component
+ * Renders the top navigation bar and manages the state for the mobile offcanvas sidebar.
+ */
 export default function Header() {
+  // State for mobile sidebar visibility
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  // State to track if the window is scrolled past a certain threshold (for styling)
   const [isScrolled, setIsScrolled] = useState(false);
+  // Current route location to trigger side-effects
   const location = useLocation();
 
-  // Scroll effect on header
+  /**
+   * Scroll effect on header
+   * Toggles the 'is-scrolled' class based on scroll position to apply background styling.
+   */
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > window.innerHeight * 0.5);
@@ -22,16 +37,21 @@ export default function Header() {
     };
   }, []);
 
-  // Close sidebar on path changes
+  /**
+   * Close sidebar on path changes
+   * Ensures the mobile navigation menu collapses automatically when a user navigates to a new page.
+   */
   useEffect(() => {
     setIsSidebarOpen(false);
   }, [location.pathname]);
 
   return (
     <>
+      {/* Main Header Element */}
       <header className={`site-header ${isScrolled ? 'is-scrolled' : ''} ${isSidebarOpen ? 'mobile-sidebar-open' : ''}`}>
         <nav className="navbar p-0" aria-label="Main navigation">
           <div className="site-nav">
+            {/* Mobile Hamburger Toggle */}
             <input 
               type="checkbox" 
               id="checkbox" 
@@ -54,6 +74,7 @@ export default function Header() {
               <img className="brand-logo" src="/header-logo.png" alt="TK INFOTECHSOFT logo" />
             </Link>
 
+            {/* Desktop Navigation Links */}
             <div className="desktop-nav d-none d-md-flex ms-auto">
               <ul className="navbar-nav flex-row align-items-center gap-lg-2">
                 <li className="nav-item">

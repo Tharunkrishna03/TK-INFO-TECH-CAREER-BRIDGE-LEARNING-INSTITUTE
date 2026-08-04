@@ -1,12 +1,24 @@
+/**
+ * CursorStar.jsx
+ * Implements a custom animated cursor (star trailing effect) using mouse events.
+ * Bypassed for users preferring reduced motion or touch devices.
+ */
 import React, { useEffect, useRef } from 'react';
 
+/**
+ * CursorStar Component
+ * Replaces the default pointer with a custom stylized element that tracks the mouse.
+ */
 export default function CursorStar() {
+  // Ref to the actual DOM element for the custom cursor
   const starRef = useRef(null);
 
   useEffect(() => {
+    // Check user preferences and device capabilities
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const supportsFinePointer = window.matchMedia('(pointer: fine)').matches;
 
+    // Hide custom cursor logic entirely if not a mouse or motion is reduced
     if (prefersReducedMotion || !supportsFinePointer) {
       return;
     }
@@ -14,8 +26,10 @@ export default function CursorStar() {
     const star = starRef.current;
     if (!star) return;
 
+    // Adds a global class to hide the default pointer
     document.body.classList.add('pointer-enabled');
 
+    // Tracking variables for position and physics
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
     let starX = mouseX;
@@ -24,6 +38,10 @@ export default function CursorStar() {
     let isMounted = true;
     let animationFrameId = null;
 
+    /**
+     * Animation loop for the custom cursor.
+     * Uses linear interpolation (lerp) for smooth trailing.
+     */
     const render = () => {
       if (!isMounted) return;
       starX += (mouseX - starX) * 0.12;
@@ -35,6 +53,9 @@ export default function CursorStar() {
       animationFrameId = window.requestAnimationFrame(render);
     };
 
+    /**
+     * Toggles interaction styles when hovering over clickable elements.
+     */
     const syncHoverState = (target) => {
       const isInteractive = Boolean(
         target &&
@@ -48,6 +69,10 @@ export default function CursorStar() {
     };
 
     const randomBetween = (min, max) => min + Math.random() * (max - min);
+
+    /**
+     * Spawns a visual 'spark' particle at the given coordinates.
+     */
 
     const spawnSpark = (x, y, isInteractive = false) => {
       const spark = document.createElement('span');
@@ -67,6 +92,9 @@ export default function CursorStar() {
       );
     };
 
+    /**
+     * Mouse move handler: update target position and conditionally spawn sparks.
+     */
     const onMouseMove = (event) => {
       mouseX = event.clientX;
       mouseY = event.clientY;
@@ -74,12 +102,16 @@ export default function CursorStar() {
       const isInteractive = syncHoverState(event.target);
       const now = performance.now();
 
+      // Throttle spark creation
       if (now - lastSparkAt > 24) {
         spawnSpark(mouseX, mouseY, isInteractive);
         lastSparkAt = now;
       }
     };
 
+    /**
+     * Hide cursor when mouse leaves the window.
+     */
     const onMouseLeave = () => {
       star.classList.remove('is-visible', 'is-hover', 'is-active');
     };

@@ -1,7 +1,13 @@
+/**
+ * Services.jsx
+ * Displays the list of software services offered.
+ * Includes an enquiry form modal for service requests.
+ */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
+// EmailJS configuration for form submissions
 const EMAILJS_CONFIG = {
   publicKey: "Nw-A_RtWpccfLfDE1",
   serviceId: "service_tuvi97l",
@@ -137,9 +143,18 @@ const offeredCourses = [
   }
 ];
 
+/**
+ * Services Component
+ * Manages the display of service details and handles the service enquiry form.
+ */
 export default function Services() {
+  // State for the currently selected service tab
   const [activeSoftwareService, setActiveSoftwareService] = useState(0);
+  
+  // State to control the visibility of the enquiry modal
   const [isServicePopupOpen, setIsServicePopupOpen] = useState(false);
+  
+  // Form data state
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -150,11 +165,18 @@ export default function Services() {
     enquiry: ''
   });
   
+  // Form validation errors state
   const [errors, setErrors] = useState({});
+  // Form submission status (success/error)
   const [status, setStatus] = useState({ text: '', type: '' });
+  // Toast notification state
   const [toast, setToast] = useState('');
+  // Loading state during form submission
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  /**
+   * Reads URL parameters on mount to open a specific service tab if requested.
+   */
   useEffect(() => {
     const selectedService = new URLSearchParams(window.location.search).get('service');
     const selectedServiceIndex = softwareServiceQueryMap[selectedService];
@@ -195,6 +217,11 @@ export default function Services() {
     }
   };
 
+  /**
+   * Validates the form data before submission.
+   * Updates the `errors` state object with specific field errors.
+   * @returns {boolean} True if form is valid, false otherwise.
+   */
   const validateForm = () => {
     const newErrors = {};
 
@@ -242,6 +269,9 @@ export default function Services() {
     window.location.href = `mailto:${PRIMARY_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
+  /**
+   * Handles form submission via EmailJS and falls back to a mailto link on failure.
+   */
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) {
@@ -465,7 +495,7 @@ export default function Services() {
                   <i className="bx bx-x"></i>
                 </button>
               </div>
-              <h2 id="service-popup-title"> Enquiry Course</h2>
+              <h2 id="service-popup-title"> Service Enquiry</h2>
               <br/>
 
               <form
@@ -596,7 +626,7 @@ export default function Services() {
                 </div>
 
                 <div className="form-actions">
-                  <button className="btn btn-brand core-services-button" type="submit" disabled={isSubmitting}>
+                  <button className="btn-submit" type="submit" disabled={isSubmitting}>
                     {isSubmitting ? 'Sending...' : 'SUBMIT'}
                   </button>
                   <Link className="btn btn-outline-secondary" to="/projects">Explore projects</Link>

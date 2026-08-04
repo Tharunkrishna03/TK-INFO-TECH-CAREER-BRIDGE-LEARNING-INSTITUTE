@@ -1,9 +1,19 @@
+/**
+ * Home.jsx
+ * The main landing page of the application.
+ * Contains the Hero section, Why Choose Us highlights, Core Services, and Work Process.
+ */
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
+/**
+ * Home Component
+ * Renders the homepage layout and manages state for interactive sections like 'Why Choose Us'.
+ */
 export default function Home() {
   const navigate = useNavigate();
 
+  // Data array for the 'Why Choose TK-INFOTECHSOFT' highlights
   const whyHighlights = [
     {
       icon: 'bx bxs-user-voice',
@@ -32,6 +42,7 @@ export default function Home() {
     }
   ];
 
+  // Data array for the core services preview
   const coreServices = [
     { title: 'Web Development', icon: 'bx bx-code-alt', service: 'web-development' },
     { title: 'Ecommerce Website', icon: 'bx bx-store-alt', service: 'e-commerce-website' },
@@ -40,6 +51,7 @@ export default function Home() {
     { title: 'Portfolio Website', icon: 'bx bx-id-card', service: 'portfolio-website' }
   ];
 
+  // Data structure for the 'Work Process' section, split by software and training
   const workProcesses = {
     software: [
       {
@@ -71,10 +83,15 @@ export default function Home() {
     ]
   };
 
+  // State hooks for active tab/slide indices in various interactive sections
   const [activeWhy, setActiveWhy] = useState(0);
   const [activeService, setActiveService] = useState(0);
   const [activeProcess, setActiveProcess] = useState('software');
 
+  /**
+   * Navigates the user to the services page and scrolls to the specific service section.
+   * @param {string} service - The slug of the service to navigate to.
+   */
   const openServiceDetails = (service) => {
     navigate(`/services?service=${service}`);
   };
@@ -86,6 +103,9 @@ export default function Home() {
     }
   };
 
+  /**
+   * Auto-rotates through the 'Why Choose Us' and 'Core Services' slides on an interval.
+   */
   useEffect(() => {
     const timer = window.setInterval(() => {
       setActiveWhy((current) => (current + 1) % whyHighlights.length);
@@ -97,11 +117,12 @@ export default function Home() {
 
   return (
     <main className="page-shell">
+      {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-backdrop"></div>
         <div className="hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow"><i className="bx bxs-rocket"></i> Courses & Software solutions</span>
+            <span className="eyebrow"><i className="bx bxs-rocket"></i> Software solutions & Courses </span>
            <br/> <h1>
               Developing talent and
               
@@ -127,6 +148,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Choose Us Section */}
       <section className="hero-highlights" aria-label="Why choose TK-INFOTECHSOFT">
         <div className="site-container">
           <div className="why-template-head reveal">
@@ -172,6 +194,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Core Services Section */}
       <section className="core-services-section theme-split" aria-label="Core services">
         <div className="core-services-inner theme-split-inner">
           <div className="theme-split-left" style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

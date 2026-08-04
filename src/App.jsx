@@ -1,3 +1,8 @@
+/**
+ * App.jsx
+ * Main application layout and routing configuration.
+ * Includes global GSAP animations, routing logic, and SEO meta tag updates.
+ */
 import React, { useEffect, useState, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
@@ -17,7 +22,10 @@ import NotFound from './pages/NotFound.jsx';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Helper function to animate counters
+/**
+ * Animates number counters from 0 to their target value when they scroll into view.
+ * Respects 'prefers-reduced-motion' settings.
+ */
 function runCounters() {
   const counters = document.querySelectorAll('[data-count-to]');
   if (!counters.length) return;
@@ -71,7 +79,10 @@ function runCounters() {
   counters.forEach((counter) => observer.observe(counter));
 }
 
-// Helper to stagger card animations
+/**
+ * Applies a staggered animation delay to elements with specific card classes.
+ * Ensures that grouped elements animate sequentially.
+ */
 function runStaggerCardMotion() {
   const animatedCards = document.querySelectorAll(
     '.stat-card, .logo-badge, .feature-card, .reason-card, .programme-card, .value-card, .partner-tile, .footer-card, .work-process-card, .about-profile-grid > article, .about-profile-contact-grid a, .application-form > *, .contact-form > *'
@@ -82,6 +93,10 @@ function runStaggerCardMotion() {
   });
 }
 
+/**
+ * Smoothly scrolls the window to the top.
+ * Respects 'prefers-reduced-motion' settings.
+ */
 function smoothScrollToTop() {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   window.scrollTo({ top: 0, left: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
@@ -122,7 +137,10 @@ function getRevealMotion(item, index) {
   return { x: 0, y: 38 };
 }
 
-// Initialize GSAP reveals
+/**
+ * Initializes GSAP ScrollTrigger animations for all elements with the 'reveal' class.
+ * Cleans up existing instances on route change to prevent duplication.
+ */
 function runRevealAnimations() {
   // Clear any existing ScrollTrigger instances to prevent layout shifting/duplication on route change
   ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -249,6 +267,11 @@ function runRevealAnimations() {
   });
 }
 
+/**
+ * Inner Application Component.
+ * Contains the routing logic, page transitions, and mounts global UI overlays (Header, Footer, Loaders).
+ * Requires the Router context to use 'useLocation'.
+ */
 function AppContent() {
   const location = useLocation();
   const [currentPath, setCurrentPath] = useState(location.pathname);
@@ -423,6 +446,10 @@ function AppContent() {
   );
 }
 
+/**
+ * Root App Component.
+ * Wraps the AppContent with the BrowserRouter context.
+ */
 export default function App() {
   return (
     <Router>

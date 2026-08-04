@@ -1,7 +1,23 @@
+/**
+ * Footer.jsx
+ * Global footer component displaying contact info, useful links, and copyright.
+ */
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+/**
+ * Footer Component
+ * Renders the site's footer with smooth-scrolling link handlers for in-page anchors.
+ */
 export default function Footer() {
+  /**
+   * Helper to handle anchor clicks smoothly.
+   * If the user is already on the target page, it prevents default and smoothly scrolls to the element ID.
+   *
+   * @param {Event} e - The click event
+   * @param {string} path - The target page path
+   * @param {string} elementId - The target element ID on the page
+   */
   const handleAnchorClick = (e, path, elementId) => {
     // If we're already on that page, scroll directly
     if (window.location.pathname === path) {
@@ -17,6 +33,7 @@ export default function Footer() {
     <footer className="site-footer" id="contacts">
       <div className="site-container">
         <div className="footer-grid">
+          {/* Contact Information Section */}
           <section className="footer-card reveal">
             <h2>TK-INFOTECHSOFT</h2>
            <br/>
@@ -24,7 +41,7 @@ export default function Footer() {
               <i className="bx bxs-phone-call"></i>
               <div>
                 <a href="tel:+919597151915">+91 95971 51915</a><br />
-                <a href="tel:+9188707084318">+91 88707084318</a>
+                <a href="tel:+918870784318">+91 88707 84318</a>
               </div>
             </div>
             <div className="contact-pair">
@@ -45,6 +62,7 @@ export default function Footer() {
             </div>
           </section>
 
+          {/* Course Links Section */}
           <section className="footer-card reveal">
             <h3>Courses</h3>
             <ul className="footer-list">
@@ -56,6 +74,7 @@ export default function Footer() {
             </ul>
           </section>
 
+          {/* Services Links Section */}
           <section className="footer-card reveal">
             <h3>Services</h3>
             <ul className="footer-list">
@@ -70,6 +89,7 @@ export default function Footer() {
           </section>
         </div>
 
+        {/* Copyright Note */}
         <p className="footer-note">
           TK-INFOTECHSOFT - TK Infotechsoft, an initiative of MC TECH Industrial School.. Copyright &copy; 2026. All rights reserved.
         </p>

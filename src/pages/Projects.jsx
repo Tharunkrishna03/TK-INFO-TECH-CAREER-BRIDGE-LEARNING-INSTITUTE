@@ -1,10 +1,22 @@
+/**
+ * Projects.jsx
+ * Displays a list of company projects and course offerings.
+ * Includes modal popups for detailed project descriptions.
+ */
 import React, { useEffect, useState } from 'react';
 
-
+/**
+ * Projects Component
+ * Renders the projects page, handling state for various modal popups.
+ */
 export default function Projects() {
+  // State hooks for managing the visibility of project details popups
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isServicePopupOpen, setIsServicePopupOpen] = useState(false);
 
+  /**
+   * Smoothly scrolls down to the first project section on the page.
+   */
   const scrollToProject = () => {
     const el = document.getElementById('jewel-finance-project');
     if (el) {
@@ -12,6 +24,11 @@ export default function Projects() {
     }
   };
 
+
+
+  /**
+   * Keyboard event listener to close any open popups when the 'Escape' key is pressed.
+   */
   useEffect(() => {
     if (!isPopupOpen && !isServicePopupOpen) return undefined;
 
@@ -28,10 +45,11 @@ export default function Projects() {
 
   return (
     <main className="page-shell projects-page">
+      {/* Hero Section for Projects */}
       <section className="project-hero">
         <div className="core-services-grid" aria-hidden="true"></div>
         <div className="site-container project-hero-inner">
-          <div className="core-services-copy reveal">
+          <div className="core-services-copy">
             <p className="dia-text-reveal" style={{ fontSize: 'clamp(3rem, 6vw, 4.5rem)', textTransform: 'uppercase' }}>OUR PROJECTS</p>
             
           </div>
@@ -42,12 +60,13 @@ export default function Projects() {
         </div>
       </section>
 
+      {/* Project 1: Jewel Finance ERP */}
       <section className="section-space project-detail-section" id="jewel-finance-project">
         <div className="site-container project-detail-layout">
-          <div className="project-detail-media reveal slide-left" style={{ background: 'transparent' }}>
+          <div className="project-detail-media" style={{ background: 'transparent' }}>
             <img src="/project.jpg" alt="Jewel Finance ERP Software project" style={{ width: '85%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '10px' }} />
           </div>
-          <div className="project-detail-copy reveal slide-right">
+          <div className="project-detail-copy">
             <h2>Jewel Finance ERP Software</h2>
             <p>
               A comprehensive ERP solution designed specifically for jewelry finance businesses to streamline customer
@@ -60,9 +79,10 @@ export default function Projects() {
         </div>
       </section>
 
+      {/* Project 2: Service Management ERP System */}
       <section className="section-space project-detail-section">
         <div className="site-container project-detail-layout">
-          <div className="project-detail-copy reveal slide-left">
+          <div className="project-detail-copy">
             <h2>Service Management ERP System</h2>
             <p>
               A powerful ERP solution developed for service-based businesses to manage clients, projects, employees,
@@ -73,8 +93,43 @@ export default function Projects() {
               Read more
             </button>
           </div>
-          <div className="project-detail-media reveal slide-right" style={{ background: 'transparent' }}>
+          <div className="project-detail-media" style={{ background: 'transparent' }}>
             <img src="/project.jpg" alt="Service Management ERP System project" style={{ width: '85%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '10px' }} />
+          </div>
+        </div>
+      </section>
+
+      {/* Project 3: Field Flow Exports */}
+      <section className="section-space project-detail-section">
+        <div className="site-container project-detail-layout">
+          <div className="project-detail-media" style={{ background: 'transparent' }}>
+            <img src="/fieldflowexports.png" alt="Field Flow Exports project" style={{ width: '85%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '10px' }} />
+          </div>
+          <div className="project-detail-copy">
+            <h2>Field Flow Exports</h2>
+            <p>
+              Field Flow Exports is a professional corporate website developed to establish a strong online presence for an export business. It features a modern, responsive design with an intuitive user experience across all devices. The website showcases the company's products, services, and global export capabilities while building customer trust. SEO-friendly architecture and optimized performance improve visibility and engagement. The platform helps generate business inquiries and strengthen the brand's digital identity.
+            </p>
+            <a href="https://fieldflowexports.com/" target="_blank" rel="noopener noreferrer" className="btn btn-brand core-services-button" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>
+              Explore more
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-space project-detail-section">
+        <div className="site-container project-detail-layout">
+          <div className="project-detail-copy">
+            <h2>Namma Amma Pickles</h2>
+            <p>
+              Namma Amma Pickles is a responsive e-commerce website developed for a homemade South Indian pickle brand. It offers an intuitive shopping experience with beautifully designed product listings, detailed descriptions, and category-based navigation. The website features a modern UI, smooth animations, WhatsApp order integration, and mobile-friendly responsiveness. Built with performance and SEO in mind, it helps the brand expand its online presence and connect directly with customers. The platform combines traditional flavors with a modern digital experience to drive customer engagement and sales.
+            </p>
+            <a href="https://numma-amma-pickle.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn btn-brand core-services-button" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>
+              Explore more
+            </a>
+          </div>
+          <div className="project-detail-media" style={{ background: 'transparent' }}>
+            <img src="/pickles.png" alt="Numma Amma Pickles project" style={{ width: '85%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '10px' }} />
           </div>
         </div>
       </section>

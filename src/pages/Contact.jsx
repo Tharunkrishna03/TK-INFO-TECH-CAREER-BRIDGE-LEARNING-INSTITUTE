@@ -1,6 +1,11 @@
+/**
+ * Contact.jsx
+ * Displays the contact page with an enquiry form and direct contact details.
+ */
 import React, { useEffect, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
+// Configuration for EmailJS service
 const EMAILJS_CONFIG = {
   publicKey: "Ou_qu_feu12sSNEkc",
   serviceId: "service_tpuqps7",
@@ -9,13 +14,25 @@ const EMAILJS_CONFIG = {
 
 const PRIMARY_EMAIL = "tkinfotechsoft@gmail.com";
 
+/**
+ * Contact Component
+ * Manages the state and submission logic for the general enquiry form.
+ */
 export default function Contact() {
+  // Form state
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  // Validation errors state
   const [errors, setErrors] = useState({});
+  // Form submission status (success/error)
   const [status, setStatus] = useState({ text: '', type: '' });
+  // Toast notification state
   const [toast, setToast] = useState('');
+  // Loading state during form submission
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  /**
+   * Clears the toast notification automatically after a few seconds.
+   */
   useEffect(() => {
     if (!toast) return undefined;
 
@@ -34,6 +51,10 @@ export default function Contact() {
     }
   };
 
+  /**
+   * Validates form fields and updates the errors state.
+   * @returns {boolean} True if form is valid, false otherwise.
+   */
   const validateForm = () => {
     const newErrors = {};
     if (!formData.name.trim()) {
@@ -57,12 +78,18 @@ export default function Contact() {
     return Object.keys(newErrors).length === 0;
   };
 
+  /**
+   * Fallback: Opens the user's default mail client with pre-filled details if EmailJS fails.
+   */
   const openMailClient = (name, email, message) => {
     const subject = `Website enquiry from ${name}`;
     const body = `Quick enquiry from TK-INFOTECHSOFT website\n\nName: ${name}\nEmail: ${email}\nEnquiry: ${message}`;
     window.location.href = `mailto:${PRIMARY_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
+  /**
+   * Form submission handler. Validates, sends via EmailJS, and updates UI status.
+   */
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) {
@@ -160,7 +187,7 @@ export default function Contact() {
                 ></textarea>
                 {errors.message && <div className="invalid-feedback">{errors.message}</div>}
               </div>
-              <button className="btn btn-brand" type="submit" disabled={isSubmitting}>
+              <button className="btn-submit" type="submit" disabled={isSubmitting}>
                 {isSubmitting ? 'Sending...' : 'Send enquiry'}
               </button>
               {status.text && (
@@ -179,7 +206,7 @@ export default function Contact() {
             <h3>TK-INFOTECHSOFT</h3>
             <div className="contact-details-list">
               <a href="tel:+919597151915">+91 95971 51915</a>
-              <a href="tel:+9188707084318">+91 88707084318</a>
+              <a href="tel:+918870784318">+91 88707 84318</a>
               <a href="mailto:tkinfotechsoft@gmail.com">tkinfotechsoft@gmail.com</a>
               <a href="mailto:dtharunkrishna65@gmail.com">dtharunkrishna65@gmail.com</a>
             </div>

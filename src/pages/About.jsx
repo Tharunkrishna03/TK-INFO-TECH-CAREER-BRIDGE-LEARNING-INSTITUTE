@@ -1,9 +1,18 @@
+/**
+ * About.jsx
+ * The 'About Us' page detailing company info, founder's profile, and contact links.
+ */
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+/**
+ * About Component
+ * Renders the about page layout and content.
+ */
 export default function About() {
   return (
     <main className="page-shell">
+      {/* Introduction Hero Section */}
       <section className="about-first-view">
         <div className="site-container about-first-view-grid">
           <div className="about-first-view-copy">
@@ -22,6 +31,7 @@ export default function About() {
         </div>
       </section>
 
+      {/* Founder Profile and Mission Section */}
       <section className="about-profile-section" id="mission">
         <div className="about-profile-head reveal">
           <div className="about-profile-title">
@@ -35,13 +45,15 @@ export default function About() {
 <p>
   At TK-INFOTECHSOFT, our priority is to provide innovative software services—including Web Development, E-Commerce Solutions, ERP Systems, CRM Applications, and Custom Software Development—while reducing the gap between industry expectations and learner capabilities through practical training, real-time projects, mentorship, and technical support.
 </p>
+            
+            {/* Contact Social Links */}
             <div className="about-profile-contact">
               <h3>Contact</h3>
               <div className="about-profile-contact-grid">
-                <a href="mailto:tkinfotechsoft@gmail.com"><i className="bx bxs-envelope"></i> tkinfotechsoft@gmail.com</a>
+                <a href="mailto:tkinfotechsoft@gmail.com"><i className="bx bxs-envelope"></i>tkinfotechsoft@gmail.com</a>
                 <a href="tel:+919597151915"><i className="bx bxs-phone-call"></i> +91 95971 51915</a>
-                <a href="https://www.linkedin.com/in/tharun-krishna-d-35a6a632b/" target="_blank" rel="noreferrer"><i className="bx bxl-linkedin-square"></i> LinkedIn</a>
-                <a href="https://www.instagram.com/tharuntk_d/" target="_blank" rel="noreferrer"><i className="bx bxl-instagram"></i> Instagram</a>
+                <a href="https://www.linkedin.com/in/tharun-krishna-d-35a6a632b/" target="_blank" rel="noreferrer"><i className="bx bxl-linkedin-square"></i>tkinfotechsoft</a>
+                <a href="https://www.instagram.com/tkinfotechsoft/?hl=en" target="_blank" rel="noreferrer"><i className="bx bxl-instagram"></i>tkinfotechsoft</a>
               </div>
             </div>
           </div>
