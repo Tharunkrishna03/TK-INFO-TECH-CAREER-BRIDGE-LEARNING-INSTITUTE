@@ -68,7 +68,7 @@ export default function Projects() {
           </div>
           <div className="project-detail-copy">
             <h2>Jewel Finance ERP Software</h2>
-            <p style={{ textAlign: 'justify' }}>
+            <p style={{ textAlign: 'justify', marginLeft: '1rem', marginRight: '1rem' }}>
               A comprehensive ERP solution designed specifically for jewelry finance businesses to streamline customer
               management, financial operations, and daily transactions through a secure and user-friendly platform.
             </p>
@@ -84,7 +84,7 @@ export default function Projects() {
         <div className="site-container project-detail-layout">
           <div className="project-detail-copy">
             <h2>Service Management ERP System</h2>
-            <p style={{ textAlign: 'justify' }}>
+            <p style={{ textAlign: 'justify', marginLeft: '1rem', marginRight: '1rem' }}>
               A powerful ERP solution developed for service-based businesses to manage clients, projects, employees,
               service requests, billing, and operations through a centralized platform with advanced Role-Based Access
               Control (RBAC).
@@ -107,7 +107,7 @@ export default function Projects() {
           </div>
           <div className="project-detail-copy">
             <h2>Field Flow Exports</h2>
-            <p style={{ textAlign: 'justify' }}>
+            <p style={{ textAlign: 'justify', marginLeft: '1rem', marginRight: '1rem' }}>
               Field Flow Exports is a professional corporate website developed to establish a strong online presence for an export business. It features a modern, responsive design with an intuitive user experience across all devices. The website showcases the company's products, services, and global export capabilities while building customer trust. SEO-friendly architecture and optimized performance improve visibility and engagement. The platform helps generate business inquiries and strengthen the brand's digital identity.
             </p>
             <a href="https://fieldflowexports.com/" target="_blank" rel="noopener noreferrer" className="btn btn-brand core-services-button" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>
@@ -121,7 +121,7 @@ export default function Projects() {
         <div className="site-container project-detail-layout">
           <div className="project-detail-copy">
             <h2>Namma Amma Pickles</h2>
-            <p style={{ textAlign: 'justify' }}>
+            <p style={{ textAlign: 'justify', marginLeft: '1rem', marginRight: '1rem' }}>
               Namma Amma Pickles is a responsive e-commerce website developed for a homemade South Indian pickle brand. It offers an intuitive shopping experience with beautifully designed product listings, detailed descriptions, and category-based navigation. The website features a modern UI, smooth animations, WhatsApp order integration, and mobile-friendly responsiveness. Built with performance and SEO in mind, it helps the brand expand its online presence and connect directly with customers. The platform combines traditional flavors with a modern digital experience to drive customer engagement and sales.
             </p>
             <a href="https://numma-amma-pickle.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn btn-brand core-services-button" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>
@@ -156,7 +156,7 @@ export default function Projects() {
                 </button>
               </div>
               <h2 id="project-popup-title">Jewel Finance ERP Software</h2>
-              <p style={{ textAlign: 'justify' }}>
+              <p style={{ textAlign: 'justify', marginLeft: '1rem', marginRight: '1rem' }}>
                 A comprehensive ERP solution designed specifically for jewelry finance businesses to streamline customer
                 management, financial operations, and daily transactions through a secure and user-friendly platform.
               </p>
@@ -212,7 +212,7 @@ export default function Projects() {
               </ul>
 
               <h3>Project Overview</h3>
-              <p style={{ textAlign: 'justify' }}>
+              <p style={{ textAlign: 'justify', marginLeft: '1rem', marginRight: '1rem' }}>
                 Developed a robust Jewelry Finance ERP System that digitizes and automates the complete workflow of a
                 jewelry finance shop. The software combines customer management, interest calculation, transaction
                 monitoring, and live precious metal market data into a single platform, helping businesses improve
@@ -245,7 +245,7 @@ export default function Projects() {
                 </button>
               </div>
               <h2 id="service-project-popup-title">Service Management ERP System</h2>
-              <p style={{ textAlign: 'justify' }}>
+              <p style={{ textAlign: 'justify', marginLeft: '1rem', marginRight: '1rem' }}>
                 A powerful ERP solution developed for service-based businesses to manage clients, projects, employees,
                 service requests, billing, and operations through a centralized platform with advanced Role-Based Access
                 Control (RBAC).
@@ -302,7 +302,7 @@ export default function Projects() {
               </ul>
 
               <h3>Project Overview</h3>
-              <p style={{ textAlign: 'justify' }}>
+              <p style={{ textAlign: 'justify', marginLeft: '1rem', marginRight: '1rem' }}>
                 Designed and developed a comprehensive Service Management ERP System for service-based organizations to
                 streamline operations, improve team collaboration, and enhance client service delivery. The platform
                 leverages Role-Based Access Control (RBAC) to ensure secure access to business data while enabling
