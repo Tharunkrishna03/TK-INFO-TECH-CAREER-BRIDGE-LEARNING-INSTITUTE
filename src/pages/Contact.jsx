@@ -220,6 +220,17 @@ export default function Contact() {
           </aside>
         </div>
       </section>
+      <section style={{ width: '100%', lineHeight: 0, marginTop: '2rem' }}>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.5791432813585!2d76.98746167505847!3d10.533775963622544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba83b32287c1113%3A0x6058c4960843acdf!2sTk%20Infotechsoft!5e0!3m2!1sen!2sin!4v1785908250115!5m2!1sen!2sin" 
+          width="100%" 
+          height="450" 
+          style={{ border: 0 }} 
+          allowFullScreen="" 
+          loading="lazy" 
+          referrerPolicy="strict-origin-when-cross-origin"
+        ></iframe>
+      </section>
     </main>
   );
 }

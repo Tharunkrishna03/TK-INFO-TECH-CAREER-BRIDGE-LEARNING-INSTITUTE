@@ -115,6 +115,8 @@ export default function Home() {
     return () => window.clearInterval(timer);
   }, [whyHighlights.length, coreServices.length]);
 
+
+
   return (
     <main className="page-shell">
       {/* Hero Section */}
@@ -281,6 +283,19 @@ export default function Home() {
               <source src="/workprocess.mp4" type="video/mp4" />
             </video>
           </div>
+        </div>
+      </section>
+
+      <section className="section-space">
+        <div className="site-container" ref={(el) => {
+          if (el && !el.querySelector('script')) {
+            const script = document.createElement('script');
+            script.src = 'https://www.jotform.com/website-widgets/embed/019fd095ebd0700087eeeb0eb4234b8f0339';
+            script.async = true;
+            el.appendChild(script);
+          }
+        }}>
+          <div id="JFWebsiteWidget-019fd095ebd0700087eeeb0eb4234b8f0339"></div>
         </div>
       </section>
 
