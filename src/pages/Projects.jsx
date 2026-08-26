@@ -4,6 +4,7 @@
  * Includes modal popups for detailed project descriptions.
  */
 import React, { useEffect, useState } from 'react';
+import Antigravity from '../components/Antigravity';
 
 /**
  * Projects Component
@@ -44,16 +45,34 @@ export default function Projects() {
   }, [isPopupOpen, isServicePopupOpen]);
 
   return (
-    <main className="page-shell projects-page">
+    <main className="page-shell projects-page" style={{ backgroundColor: 'white' }}>
       {/* Hero Section for Projects */}
-      <section className="project-hero">
-        <div className="core-services-grid" aria-hidden="true"></div>
-        <div className="site-container project-hero-inner">
-          <div className="core-services-copy">
-            <p className="dia-text-reveal" style={{ fontSize: 'clamp(3rem, 6vw, 4.5rem)', textTransform: 'uppercase' }}>OUR PROJECTS</p>
-            
+      <section className="project-hero" style={{ minHeight: '100vh', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ width: '1080px', height: '1080px', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 0 }}>
+          <Antigravity
+            count={300}
+            magnetRadius={8}
+            ringRadius={10}
+            waveSpeed={0.4}
+            waveAmplitude={1}
+            particleSize={2}
+            lerpSpeed={0.1}
+            colors={['#FF5733', '#33FF57', '#3357FF', '#FF33F5', '#33FFF5', '#F5FF33']}
+            autoAnimate={false}
+            particleVariance={1}
+            rotationSpeed={0}
+            depthFactor={1}
+            pulseSpeed={3}
+            particleShape="capsule"
+            fieldStrength={10}
+          />
+        </div>
+        <div className="site-container project-hero-inner" style={{ zIndex: 1, position: 'relative', pointerEvents: 'none' }}>
+          <div className="core-services-copy" style={{ pointerEvents: 'auto' }}>
+            <p className="dia-text-reveal" style={{ fontSize: 'clamp(2rem, 3vw, 2.5rem)', textTransform: 'uppercase', color: 'black' }}>OUR PROJECTS</p>
+
           </div>
-          <button className="project-scroll-button" type="button" onClick={scrollToProject}>
+          <button className="project-scroll-button" type="button" onClick={scrollToProject} style={{ pointerEvents: 'auto' }}>
             <span>Scroll now</span>
             <i className="bx bx-down-arrow-alt" aria-hidden="true"></i>
           </button>
