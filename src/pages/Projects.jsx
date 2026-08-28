@@ -44,8 +44,47 @@ export default function Projects() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isPopupOpen, isServicePopupOpen]);
 
+  // Scroll animation observer for images
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          } else {
+            entry.target.classList.remove('is-visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px" }
+    );
+
+    const elements = document.querySelectorAll('.project-scroll-animate');
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <main className="page-shell projects-page" style={{ backgroundColor: 'white' }}>
+      <style>
+        {`
+          .project-scroll-animate {
+            transform: scale(0.5);
+            opacity: 0;
+            transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+            will-change: transform, opacity;
+          }
+          .project-scroll-animate.is-visible {
+            transform: scale(1);
+            opacity: 1;
+          }
+          .project-scroll-animate.is-visible:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+          }
+        `}
+      </style>
       {/* Hero Section for Projects */}
       <section className="project-hero" style={{ minHeight: '100vh', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{ width: '1080px', height: '1080px', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 0 }}>
@@ -83,7 +122,7 @@ export default function Projects() {
       <section className="section-space project-detail-section" id="jewel-finance-project">
         <div className="site-container project-detail-layout">
           <div className="project-detail-media" style={{ background: 'transparent' }}>
-            <img src="/project.jpg" alt="Jewel Finance ERP Software project" style={{ width: '85%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '10px' }} />
+            <img src="/project.jpg" alt="Jewel Finance ERP Software project" className="project-scroll-animate" style={{ width: '85%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '10px' }} />
           </div>
           <div className="project-detail-copy">
             <h2>Jewel Finance ERP Software</h2>
@@ -113,7 +152,7 @@ export default function Projects() {
             </button>
           </div>
           <div className="project-detail-media" style={{ background: 'transparent' }}>
-            <img src="/project.jpg" alt="Service Management ERP System project" style={{ width: '85%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '10px' }} />
+            <img src="/project.jpg" alt="Service Management ERP System project" className="project-scroll-animate" style={{ width: '85%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '10px' }} />
           </div>
         </div>
       </section>
@@ -122,7 +161,7 @@ export default function Projects() {
       <section className="section-space project-detail-section">
         <div className="site-container project-detail-layout">
           <div className="project-detail-media" style={{ background: 'transparent' }}>
-            <img src="/fieldflowexports.png" alt="Field Flow Exports project" style={{ width: '85%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '10px' }} />
+            <img src="/fieldflowexports.png" alt="Field Flow Exports project" className="project-scroll-animate" style={{ width: '85%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '10px' }} />
           </div>
           <div className="project-detail-copy">
             <h2>Field Flow Exports</h2>
@@ -148,7 +187,7 @@ export default function Projects() {
             </a>
           </div>
           <div className="project-detail-media" style={{ background: 'transparent' }}>
-            <img src="/pickles.png" alt="Numma Amma Pickles project" style={{ width: '85%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '10px' }} />
+            <img src="/pickles.png" alt="Numma Amma Pickles project" className="project-scroll-animate" style={{ width: '85%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '10px' }} />
           </div>
         </div>
       </section>
