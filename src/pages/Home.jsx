@@ -16,29 +16,29 @@ export default function Home() {
   // Data array for the 'Why Choose TK-INFOTECHSOFT' highlights
   const whyHighlights = [
     {
-      icon: 'bx bxs-user-voice',
-      title: 'Mentor Guidance',
-      text: 'Live mentor-led sessions with guidance you can actually use.'
-    },
-    {
-      icon: 'bx bxs-briefcase',
-      title: 'Portfolio Practice',
-      text: 'Portfolio projects and interview-focused practice built into learning.'
-    },
-    {
-      icon: 'bx bxs-file-doc',
-      title: 'Career Support',
-      text: 'Career support for resumes, ATS readiness, and course registration.'
-    },
-    {
       icon: 'bx bxs-devices',
-      title: 'Web Development',
-      text: 'From career training to custom web development, we provide end-to-end solutions designed for growth. Our focus on quality, innovation, and real-world results ensures value for both learners and businesses.'
+      title: 'Modern Web Solutions',
+      text: 'Build fast, responsive websites'
     },
     {
-      icon: 'bx bxs-dashboard',
-      title: 'Business ERP',
-      text: 'Built with flexibility and performance in mind, our product streamlines workflows, centralizes business processes, and delivers real-time insights. It adapts to your needs, helping you work smarter and achieve better results.'
+      icon: 'bx bx-code-block',
+      title: 'Custom Software Development',
+      text: 'Solutions tailored to businesses'
+    },
+    {
+      icon: 'bx bx-chip',
+      title: 'Latest Technologies',
+      text: 'Modern tools and frameworks'
+    },
+    {
+      icon: 'bx bx-line-chart',
+      title: 'Scalable Applications',
+      text: 'Software built for growth'
+    },
+    {
+      icon: 'bx bx-paint',
+      title: 'User-Friendly Designs',
+      text: 'Simple and engaging interfaces'
     }
   ];
 
